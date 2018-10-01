@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBot"
         mc:Ignorable="d"
-        Title="Chat Bot" Height="471.149" Width="333.551">
+        Title="Chat Bot" Height="471.149" Width="333.551" ResizeMode="NoResize">
 	<Window.Resources>
 		<Image x:Key="resourceImage" Source="Images/arrow.png"/>
 		<Style x:Key="GlassButton" TargetType="{x:Type Button}">
@@ -273,7 +273,7 @@
 		</Grid.ColumnDefinitions>
 		<Button Content="{StaticResource resourceImage}" Grid.Column="1" Margin="257,3,0,1" Grid.Row="1" Click="Button_Click" Style="{StaticResource GlassButton}"/>
 		<TextBox x:Name="textBox1" Grid.Column="1" Margin="1,0,58,1" Grid.Row="1" TextWrapping="Wrap" Text="" Background="{x:Null}" />
-		<ScrollViewer Grid.Column="1" HorizontalAlignment="Left" Height="379" Margin="1,10,0,0" VerticalAlignment="Top" Width="306">
+		<ScrollViewer Grid.Column="1" HorizontalAlignment="Left" Height="379" Margin="1,10,0,0" VerticalAlignment="Top" Width="301">
 			<StackPanel Name="myStackPanel" Grid.Column="1" Margin="1,10,0,10"/>
 		</ScrollViewer>
 	</Grid>

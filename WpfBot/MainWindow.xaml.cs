@@ -33,27 +33,6 @@ namespace WpfBot
             {
                 StackPanel all = new StackPanel();
 
-                Border circleImg = new Border();
-                circleImg.CornerRadius = new CornerRadius(25);
-                circleImg.Width = 50;
-                circleImg.Height = 50;
-
-                BitmapImage img = new BitmapImage(new Uri(@"pack://application:,,,/WpfBot;component/Images/cat1.jpg"));
-                if (isHuman)
-                    img = new BitmapImage(new Uri(@"pack://application:,,,/WpfBot;component/Images/cat1.jpg"));
-                else
-                    img = new BitmapImage(new Uri(@"pack://application:,,,/WpfBot;component/Images/cat2.jpg"));
-
-                ImageBrush image = new ImageBrush();
-                image.ImageSource = img;
-                circleImg.Background = image;
-                myStackPanel.Children.Add(circleImg);
-
-                if (isHuman)
-                    circleImg.HorizontalAlignment = HorizontalAlignment.Left;
-                else
-                    circleImg.HorizontalAlignment = HorizontalAlignment.Right;
-
                 Border Mess = new Border();
                 Mess.BorderBrush = Brushes.DarkCyan;
                 Mess.BorderThickness = new Thickness(1);
@@ -68,17 +47,18 @@ namespace WpfBot
                 txtToAdd.FontSize = 15;
                 txtToAdd.FontWeight = FontWeights.Black;
                 txtToAdd.FontWeight = FontWeights.Bold;
+                txtToAdd.TextWrapping = TextWrapping.Wrap;
                 Mess.Child = txtToAdd;
                 //Велосипед отоброжения типа бот
                 if (isHuman)
                 {
                     Mess.HorizontalAlignment = HorizontalAlignment.Left;
-                    Mess.Margin = new Thickness(51, 0, 0, 5);
+                    Mess.Margin = new Thickness(1, 0, 25, 15);
                 }
                 else
                 {
                     Mess.HorizontalAlignment = HorizontalAlignment.Right;
-                    Mess.Margin = new Thickness(0, 0, 51, 5);
+                    Mess.Margin = new Thickness(20, 0, 7, 15);
                 }
 
                 myStackPanel.Children.Add(Mess);
