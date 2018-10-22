@@ -1,0 +1,14 @@
+C:\Git\WpfBot\WpfBot\bin\Release\WpfBot.exe.config
+C:\Git\WpfBot\WpfBot\bin\Release\WpfBot.exe
+C:\Git\WpfBot\WpfBot\bin\Release\WpfBot.pdb
+C:\Git\WpfBot\WpfBot\obj\Release\MainWindow.g.cs
+C:\Git\WpfBot\WpfBot\obj\Release\App.g.cs
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot_MarkupCompile.cache
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot_MarkupCompile.lref
+C:\Git\WpfBot\WpfBot\obj\Release\MainWindow.baml
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.g.resources
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.Properties.Resources.resources
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.csproj.GenerateResource.cache
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.csproj.CoreCompileInputs.cache
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.exe
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.pdb

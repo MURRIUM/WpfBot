@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cat2.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bot/baza.txt")]
 
 

@@ -20,7 +20,6 @@ C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.csprojResolveAssemblyReference.cache
 C:\Git\WpfBot\WpfBot\obj\Debug\MainWindow.g.cs
 C:\Git\WpfBot\WpfBot\obj\Debug\App.g.cs
 C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot_MarkupCompile.cache
-C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot_MarkupCompile.lref
 C:\Git\WpfBot\WpfBot\obj\Debug\MainWindow.baml
 C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.g.resources
 C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.Properties.Resources.resources
@@ -28,3 +27,4 @@ C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.csproj.GenerateResource.cache
 C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.csproj.CoreCompileInputs.cache
 C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.exe
 C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot.pdb
+C:\Git\WpfBot\WpfBot\obj\Debug\WpfBot_MarkupCompile.lref
