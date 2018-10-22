@@ -95,14 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\cat1.jpg" />
-    <Resource Include="Images\cat2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\arrow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bot\baza.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
