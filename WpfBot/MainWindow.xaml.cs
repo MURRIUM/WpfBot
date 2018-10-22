@@ -38,7 +38,7 @@ namespace WpfBot
                 else if(studyingMod && textBox1.Text == "studyingMod.deactivate")
                 {//Выключение режима обучения
                     studyingMod = false;
-                    createMessage("Введите текст, на который я должен дать ответ:", false);
+                    createMessage("Режим обучения выключен", false);
                 }
                 else if (studyingMod && isHuman && botAI.Answer(textBox1.Text) == "Извините, я вас не понимаю")
                 {//Обучение сообщению пользователя
