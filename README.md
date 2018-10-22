@@ -4,3 +4,4 @@
 studyingMod.activate
 Для выключения режима обучения напишите
 studyingMod.deactivate
+
