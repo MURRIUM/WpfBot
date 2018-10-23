@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using WpfBot.Bot;
 
@@ -66,6 +67,14 @@ namespace WpfBot
                     createMessage(botAI.Answer(textBox1.Text), false);
                 }
                 textBox1.Text = "";
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Button_Click(sender, e);
             }
         }
 
