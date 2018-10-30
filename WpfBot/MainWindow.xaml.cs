@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Media;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +15,7 @@ namespace WpfBot
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SoundPlayer sp;
         BotMain botAI;
         bool studyingMod = false, isHuman = true;
         string userSays;
@@ -21,6 +24,7 @@ namespace WpfBot
         {
             InitializeComponent();
             botAI = new BotMain();
+            sp = new SoundPlayer(@"Nani.wav");
             using (StreamWriter log = File.CreateText("log.txt"))
             {
                 log.WriteLine("Последняя сессия:");
@@ -29,11 +33,15 @@ namespace WpfBot
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+            
+            
             //Отправка сообщения
             if (textBox1.Text != "")
             {
                 if(botAI.Censor(textBox1.Text) == "Ты написал мне плохое сообщение!")
                 {
+                    sp.Play();
                     createMessage(botAI.Censor(textBox1.Text), false);
                 }
                 else if(studyingMod && textBox1.Text == "studyingMod.deactivate")
