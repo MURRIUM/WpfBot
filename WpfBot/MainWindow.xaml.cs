@@ -130,6 +130,11 @@ namespace WpfBot
 
         private void createMessage(string str, bool isHuman)
         {
+            if(str == "")
+            {
+                return;
+            }
+            
             //логгирование текущей сессии
             using (StreamWriter log = File.AppendText("log.txt"))
             {

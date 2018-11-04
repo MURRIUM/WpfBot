@@ -29,11 +29,20 @@ namespace WpfBot.Bot
             {
                 return str;
             }
+
+            if(baze.ToArray().Length == 0)
+            {
+                return "";
+            }
             for(int i = 0; i < baze.ToArray().Length; i += 2)
             {
                 ansMatch = new Regex(baze[i].ToLower());
                 if(ansMatch.IsMatch(str))
                 {
+                    if(baze[i+1] == " ")
+                    {
+                        return "";
+                    }
                     return baze[i + 1];
                 }
             }
