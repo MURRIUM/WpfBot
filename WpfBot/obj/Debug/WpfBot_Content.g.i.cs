@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bot/baza.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tests.csproj")]
 
 

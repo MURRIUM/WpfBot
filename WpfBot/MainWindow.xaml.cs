@@ -19,7 +19,7 @@ namespace WpfBot
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SoundPlayer matSound, knockSound, missingUser;
+        private SoundPlayer matSound, knockSound, missingUser, incorrectSound;
         BotMain botAI;
         bool studyingMod = false, isHuman = true;
         string userSays;
@@ -33,6 +33,7 @@ namespace WpfBot
             matSound = new SoundPlayer(@"oiio.wav");
             knockSound = new SoundPlayer(@"vknock.wav");
             missingUser = new SoundPlayer(@"qq.wav");
+            incorrectSound = new SoundPlayer(@"IncorrectEnter.wav");
             timer1 = new DispatcherTimer();
             timer1.Tick += new EventHandler(timerTick);
             timer1.Interval = new TimeSpan(0, 0, 0, 120, 0);
@@ -46,7 +47,7 @@ namespace WpfBot
 
         void MainWindow_Closing(object sender, CancelEventArgs e)
         {
-            if (MessageBox.Show("Закрыть чат бота?", "Закрытие", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            if (MessageBox.Show("Ты хочешь уйти?", "Закрытие", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
             {
                 //do no stuff
                 e.Cancel = true;
@@ -54,6 +55,7 @@ namespace WpfBot
             else
             {
                 //do yes stuff
+                MessageBox.Show("Пока");
             }
         }
 
@@ -61,7 +63,7 @@ namespace WpfBot
         {
             this.FlashWindow();
             missingUser.Play();
-            createMessage("Чего нового?", false);
+            createMessage("Тебя давно не было?", false);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -80,7 +82,7 @@ namespace WpfBot
                     createMessage("Режим обучения выключен", false);
                     knockSound.Play();
                 }
-                else if (studyingMod && isHuman && botAI.Answer(textBox1.Text) == "Извините, я вас не понимаю")
+                else if (studyingMod && isHuman && botAI.Answer(textBox1.Text) == "Я не понимаю, о чем ты говоришь")
                 {//Обучение сообщению пользователя
                     createMessage(textBox1.Text, true);
                     userSays = textBox1.Text;
@@ -104,7 +106,10 @@ namespace WpfBot
                 {//Механизм общения с ботом
                     createMessage(textBox1.Text, true);
                     createMessage(botAI.Answer(textBox1.Text), false);
-                    knockSound.Play();
+                    if (botAI.Answer(textBox1.Text) == "Я не понимаю, о чем ты говоришь") 
+                        incorrectSound.Play();
+                    else
+                        knockSound.Play();
                     this.FlashWindow();
                 }
                 textBox1.Text = "";
@@ -143,7 +148,8 @@ namespace WpfBot
             TextBox txtToAdd = new TextBox();
             txtToAdd.Text = str;
             txtToAdd.IsEnabled = false;
-            txtToAdd.FontSize = 15;
+            txtToAdd.FontSize = 16;
+            txtToAdd.FontFamily = new FontFamily("Times New Roman");
             txtToAdd.FontWeight = FontWeights.Black;
             txtToAdd.FontWeight = FontWeights.Bold;
             txtToAdd.TextWrapping = TextWrapping.Wrap;

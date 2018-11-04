@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBot"
         mc:Ignorable="d"
-        Title="Chat Bot" Height="471.149" Width="333.551" ResizeMode="NoResize">	
+        Title="Chat Bot" Height="471.149" Width="333.551" ResizeMode="NoResize" FontFamily="Times New Roman">	
 	<Window.Resources>
 		<Image x:Key="resourceImage" Source="Images/arrow.png"/>
 		<Style x:Key="GlassButton" TargetType="{x:Type Button}">
