@@ -12,7 +12,6 @@ namespace WpfBot.Bot
     {
 
         List<string> baze = new List<string>();
-        static Regex ansMatch;
         string toTrim = "(){}:!?&@#$%^&*`~'\"\\/,.<>-_=+*";
 
         public BotMain()
@@ -34,12 +33,17 @@ namespace WpfBot.Bot
             {
                 return "";
             }
+
+            if(str == "")
+            {
+                return "Я не понимаю, о чем ты говоришь";
+            }
+
             for(int i = 0; i < baze.ToArray().Length; i += 2)
             {
-                ansMatch = new Regex(baze[i].ToLower());
-                if(ansMatch.IsMatch(str))
+                if(Regex.IsMatch(baze[i].ToLower().Trim(toTrim.ToCharArray()), str, RegexOptions.IgnoreCase))
                 {
-                    if(baze[i+1] == " ")
+                    if(baze[i + 1] == " ")
                     {
                         return "";
                     }

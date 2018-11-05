@@ -12,3 +12,5 @@ C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.csproj.GenerateResource.cache
 C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.csproj.CoreCompileInputs.cache
 C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.exe
 C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.pdb
+C:\Git\WpfBot\WpfBot\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Git\WpfBot\WpfBot\obj\Release\WpfBot.csproj.CopyComplete
